@@ -20,7 +20,7 @@ public class AppInicio extends Application {
         Button Login = new Button("Iniciar Secion");
         Button Register = new Button("Registrarse");
 
-        root.getChildren().setAll(label,Login,Register);
+        root.getChildren().addAll(label,Login,Register);
 
         root.setAlignment(Pos.CENTER);
 
