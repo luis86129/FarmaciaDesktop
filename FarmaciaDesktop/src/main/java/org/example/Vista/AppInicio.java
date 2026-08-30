@@ -25,7 +25,27 @@ public class AppInicio extends Application {
         root.setAlignment(Pos.CENTER);
 
         Login.setOnAction(event -> {
+            try {
+                AppLogin Ingresar = new AppLogin();
 
+                Ingresar.start(new Stage());
+
+                primaryStage.close();
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+        });
+
+        Register.setOnAction(event -> {
+            try {
+                AppInicio Registrar = new AppInicio();
+
+                Registrar.start(new Stage());
+
+                primaryStage.close();
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
         });
 
         Scene scene = new Scene(root, 400, 300);
