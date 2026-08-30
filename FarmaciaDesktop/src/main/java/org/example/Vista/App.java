@@ -25,13 +25,15 @@ public class App extends Application {
         root.setAlignment(Pos.CENTER);
 
         Ingresar.setOnAction(event -> {
-            Alert alerta = new Alert(Alert.AlertType.INFORMATION);
-            alerta.setTitle("Confirmación");
-            alerta.setHeaderText(null); // Quita la cabecera por defecto para dejar solo el mensaje
-            alerta.setContentText("Ha Ingresado al menu de ingreso de manera satisfactoria");
+            try {
+                AppInicio Inicio = new AppInicio();
 
-            // Muestra la ventana y pausa la ejecución hasta que el usuario presione [Aceptar]
-            alerta.showAndWait();
+                Inicio.start(new Stage());
+
+                stage.close();
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
         });
 
         Cerrar.setOnAction(event -> {
@@ -39,7 +41,7 @@ public class App extends Application {
         });
 
         Scene scene = new Scene(root, 400, 300);
-        stage.setTitle("Pantalla Inicio");
+        stage.setTitle("Initial");
         stage.setScene(scene);
         stage.show();
     }
