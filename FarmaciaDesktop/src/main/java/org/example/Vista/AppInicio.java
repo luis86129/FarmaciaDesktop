@@ -38,7 +38,7 @@ public class AppInicio extends Application {
 
         Register.setOnAction(event -> {
             try {
-                AppInicio Registrar = new AppInicio();
+                AppRegister Registrar = new AppRegister();
 
                 Registrar.start(new Stage());
 
