@@ -128,3 +128,8 @@
 .btn-danger:hover {
     -fx-background-color: #dc2626;
 }
+.error-label {
+    -fx-font-size: 12px;
+    -fx-text-fill: #ef4444;
+    -fx-font-weight: bold;
+}

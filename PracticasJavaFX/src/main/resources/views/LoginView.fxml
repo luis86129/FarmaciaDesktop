@@ -7,8 +7,11 @@
       alignment="CENTER" spacing="15" styleClass="root-container">
 
     <Label text="Iniciar Sesión" styleClass="title-label" />
-    <TextField promptText="Usuario" styleClass="input-field" />
-    <PasswordField promptText="Contraseña" styleClass="input-field" />
+
+    <TextField fx:id="txtEmail" promptText="Correo electrónico" styleClass="input-field" />
+    <PasswordField fx:id="txtPassword" promptText="Contraseña" styleClass="input-field" />
+
+    <Label fx:id="lblError" styleClass="error-label" visible="false" managed="false" />
 
     <Button text="Ingresar" styleClass="btn-primary" onAction="#onLogin" />
     <Button text="Volver al Menú" styleClass="btn-link" onAction="#goBack" />

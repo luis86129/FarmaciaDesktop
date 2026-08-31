@@ -4,13 +4,16 @@
 
 <VBox xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml"
       fx:controller="org.example.RegisterController"
-      alignment="CENTER" spacing="15" styleClass="root-container">
+      alignment="CENTER" spacing="12" styleClass="root-container">
 
     <Label text="Crear Cuenta" styleClass="title-label" />
-    <TextField promptText="Nombre completo" styleClass="input-field" />
-    <TextField promptText="Correo electrónico" styleClass="input-field" />
-    <PasswordField promptText="Contraseña" styleClass="input-field" />
 
-    <Button text="Registrar" styleClass="btn-primary" />
+    <TextField fx:id="txtNombre" promptText="Nombre completo" styleClass="input-field" />
+    <TextField fx:id="txtEmail" promptText="Correo electrónico" styleClass="input-field" />
+    <PasswordField fx:id="txtPassword" promptText="Contraseña" styleClass="input-field" />
+
+    <Label fx:id="lblStatus" styleClass="error-label" visible="false" managed="false" />
+
+    <Button text="Registrar" styleClass="btn-primary" onAction="#onRegister" />
     <Button text="Volver al Menú" styleClass="btn-link" onAction="#goBack" />
 </VBox>
