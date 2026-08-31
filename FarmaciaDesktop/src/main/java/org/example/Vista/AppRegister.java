@@ -91,7 +91,8 @@ public class AppRegister extends Application {
             }
         });
 
-        Scene scene = new Scene(root, 400, 300);
+        Scene scene = new Scene(root, 400, 600);
+        scene.getStylesheets().add(getClass().getResource("/estilos.css").toExternalForm());
         primaryStage.setTitle("Login");
         primaryStage.setScene(scene);
         primaryStage.show();

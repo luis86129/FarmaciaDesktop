@@ -1,0 +1,72 @@
+/* =========================================================
+   ESTILOS GENERALES Y TEMA OSCURO MODERNO (JAVAFX)
+   ========================================================= */
+
+/* Fondo para la ventana principal */
+.root {
+    -fx-background-color: #0f172a;
+    -fx-font-family: "Segoe UI", Helvetica, Arial, sans-serif;
+}
+
+/* ---------------------------------------------------------
+   ETIQUETAS (Labels)
+   --------------------------------------------------------- */
+.label {
+    -fx-text-fill: #e2e8f0;
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+}
+
+/* ---------------------------------------------------------
+   ENTRADAS DE TEXTO Y CONTRASEÑAS (TextField & PasswordField)
+   --------------------------------------------------------- */
+.text-field, .password-field {
+    -fx-background-color: #1e293b;
+    -fx-text-fill: #f8fafc;
+    -fx-prompt-text-fill: #64748b;
+    -fx-highlight-fill: #0284c7;
+    -fx-border-color: #334155;
+    -fx-border-width: 1.5px;
+    -fx-border-radius: 6px;
+    -fx-background-radius: 6px;
+    -fx-padding: 8px 12px;
+    -fx-font-size: 13px;
+}
+
+/* Efecto al pasar el ratón (Hover) sobre las cajas de texto */
+.text-field:hover, .password-field:hover {
+    -fx-border-color: #475569;
+    -fx-background-color: #26334d;
+}
+
+/* Efecto al hacer clic / escribir en la caja de texto (Focus) */
+.text-field:focused, .password-field:focused {
+    -fx-border-color: #38bdf8;
+    -fx-background-color: #1e293b;
+}
+
+/* ---------------------------------------------------------
+   BOTONES (Buttons)
+   --------------------------------------------------------- */
+.button {
+    -fx-background-color: #0284c7;
+    -fx-text-fill: #ffffff;
+    -fx-font-size: 13px;
+    -fx-font-weight: bold;
+    -fx-background-radius: 6px;
+    -fx-border-radius: 6px;
+    -fx-padding: 8px 18px;
+    -fx-cursor: hand;
+}
+
+/* Efecto Hover (Al pasar el ratón sobre el botón) */
+.button:hover {
+    -fx-background-color: #0369a1;
+}
+
+/* Efecto Pressed (Al hacer clic en el botón) */
+.button:pressed {
+    -fx-background-color: #075985;
+    -fx-scale-x: 0.98;
+    -fx-scale-y: 0.98;
+}

@@ -16,44 +16,16 @@ import javafx.stage.Stage;
 
 public class AppHub extends Application {
 
-    public static class Producto {
-        private String nombre;
-        private double precio;
-
-        public Producto(String nombre, double precio) {
-            this.nombre = nombre;
-            this.precio = precio;
-        }
-
-        public String getNombre() { return nombre; }
-        public double getPrecio() { return precio; }
-    }
-
     @Override
     public void start(Stage primaryStage) throws Exception {
-        TableView<Producto> tabla = new TableView<>();
+        Label label = new Label("Hola :D");
 
-        TableColumn<Producto, String> colNombre = new TableColumn<>("Nombre");
-        colNombre.setCellValueFactory(new PropertyValueFactory<>("nombre"));
-
-        TableColumn<Producto, Double> colPrecio = new TableColumn<>("Precio");
-        colPrecio.setCellValueFactory(new PropertyValueFactory<>("precio"));
-
-        tabla.getColumns().addAll(colNombre, colPrecio);
-
-        ObservableList<Producto> listaDatos = FXCollections.observableArrayList(
-                new Producto("Paracetamol", 2.50),
-                new Producto("Ibuprofeno", 3.10),
-                new Producto("Amoxicilina", 8.00),
-                new Producto("Penicilina" , 9.00)
-        );
-
-        tabla.setItems(listaDatos);
-
-        VBox root = new VBox(10, tabla);
+        VBox root = new VBox(10);
+        root.getChildren().addAll(label);
         root.setAlignment(Pos.CENTER);
 
         Scene scene = new Scene(root, 400, 300);
+        scene.getStylesheets().add(getClass().getResource("/estilos.css").toExternalForm());
         primaryStage.setTitle("Tabla de Productos");
         primaryStage.setScene(scene);
         primaryStage.show();

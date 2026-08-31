@@ -49,6 +49,7 @@ public class AppInicio extends Application {
         });
 
         Scene scene = new Scene(root, 400, 300);
+        scene.getStylesheets().add(getClass().getResource("/estilos.css").toExternalForm());
         primaryStage.setTitle("Login or Register");
         primaryStage.setScene(scene);
         primaryStage.show();

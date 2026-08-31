@@ -68,6 +68,7 @@ public class AppLogin extends Application {
         root.setAlignment(Pos.TOP_CENTER);
 
         Scene scene = new Scene(root, 400, 300);
+        scene.getStylesheets().add(getClass().getResource("/estilos.css").toExternalForm());
         primaryStage.setTitle("Login");
         primaryStage.setScene(scene);
         primaryStage.show();
