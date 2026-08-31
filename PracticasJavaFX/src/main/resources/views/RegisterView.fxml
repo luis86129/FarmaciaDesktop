@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml"
+      fx:controller="org.example.RegisterController"
+      alignment="CENTER" spacing="15" styleClass="root-container">
+
+    <Label text="Crear Cuenta" styleClass="title-label" />
+    <TextField promptText="Nombre completo" styleClass="input-field" />
+    <TextField promptText="Correo electrónico" styleClass="input-field" />
+    <PasswordField promptText="Contraseña" styleClass="input-field" />
+
+    <Button text="Registrar" styleClass="btn-primary" />
+    <Button text="Volver al Menú" styleClass="btn-link" onAction="#goBack" />
+</VBox>

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml"
+      fx:controller="org.example.HubController"
+      spacing="0" styleClass="hub-container">
+
+    <!-- Barra de Navegación / Encabezado -->
+    <HBox styleClass="hub-header" alignment="CENTER_LEFT" spacing="10">
+        <Label text="Farmacia - Panel Principal" styleClass="hub-title" />
+        <Region HBox.hgrow="ALWAYS" />
+        <Label fx:id="lblWelcome" text="Bienvenido, Usuario" styleClass="user-label" />
+        <Button text="Cerrar Sesión" styleClass="btn-danger" onAction="#onLogout" />
+    </HBox>
+
+    <!-- Contenido Principal -->
+    <VBox spacing="20" styleClass="hub-content" VBox.vgrow="ALWAYS">
+        <Label text="Módulos Disponibles" styleClass="section-title" />
+
+        <!-- Grid de Tarjetas de Módulos (Fácil de expandir) -->
+        <GridPane hgap="15" vgap="15">
+            <columnConstraints>
+                <ColumnConstraints percentWidth="50" />
+                <ColumnConstraints percentWidth="50" />
+            </columnConstraints>
+
+            <VBox styleClass="card" GridPane.columnIndex="0" GridPane.rowIndex="0">
+                <Label text=" Ventas" styleClass="card-title" />
+                <Label text="Gestión de ventas y facturación rápida." styleClass="card-desc" />
+                <Button text="Acceder" styleClass="btn-card" onAction="#onOpenSales" />
+            </VBox>
+
+            <VBox styleClass="card" GridPane.columnIndex="1" GridPane.rowIndex="0">
+                <Label text=" Inventario" styleClass="card-title" />
+                <Label text="Control de stock y medicamentos." styleClass="card-desc" />
+                <Button text="Acceder" styleClass="btn-card" onAction="#onOpenInventory" />
+            </VBox>
+        </GridPane>
+    </VBox>
+</VBox>
