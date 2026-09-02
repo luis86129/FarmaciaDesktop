@@ -13,7 +13,7 @@ public class Main extends Application {
 
     @Override
     public void start(Stage primaryStage) {
-        primaryStage.setTitle("Sistema Farmacia");
+        primaryStage.setTitle("Sistema Farmacia Hola");
         DatabaseManager.initDatabase(); // <-- Inicializa SQLite
         // Cargar el icono desde los recursos
         Image icon = new Image(Objects.requireNonNull(getClass().getResourceAsStream("/icon.png")));
